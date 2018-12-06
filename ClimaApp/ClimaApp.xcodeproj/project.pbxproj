@@ -16,6 +16,13 @@
 		5EF5451021B979F500F73A9F /* ClimaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5450F21B979F500F73A9F /* ClimaAppTests.swift */; };
 		5EF5451E21B9888700F73A9F /* CitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5451D21B9888700F73A9F /* CitiesTableViewController.swift */; };
 		5EF5452021B9890E00F73A9F /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5451F21B9890E00F73A9F /* CityTableViewCell.swift */; };
+		5EF5452421B9AEAB00F73A9F /* ApiRequestExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5452321B9AEAB00F73A9F /* ApiRequestExecuter.swift */; };
+		5EF5452A21B9B28C00F73A9F /* CountriesSearchQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5452921B9B28C00F73A9F /* CountriesSearchQueryBuilder.swift */; };
+		5EF5452C21B9B2A500F73A9F /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5452B21B9B2A500F73A9F /* QueryBuilder.swift */; };
+		5EF5452E21B9B48300F73A9F /* CountriesSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5452D21B9B48300F73A9F /* CountriesSearcher.swift */; };
+		5EF5453121B9B4D000F73A9F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5453021B9B4D000F73A9F /* Country.swift */; };
+		5EF5453321B9B7B100F73A9F /* URLConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5453221B9B7B100F73A9F /* URLConverter.swift */; };
+		5EF5453521B9B90100F73A9F /* CountriesSearchResultParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5453421B9B90100F73A9F /* CountriesSearchResultParser.swift */; };
 		DEF6876DCC884CCD8DF11615 /* Pods_ClimaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739BB1559E93346130E55144 /* Pods_ClimaAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +51,13 @@
 		5EF5451121B979F500F73A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EF5451D21B9888700F73A9F /* CitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableViewController.swift; sourceTree = "<group>"; };
 		5EF5451F21B9890E00F73A9F /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		5EF5452321B9AEAB00F73A9F /* ApiRequestExecuter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestExecuter.swift; sourceTree = "<group>"; };
+		5EF5452921B9B28C00F73A9F /* CountriesSearchQueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesSearchQueryBuilder.swift; sourceTree = "<group>"; };
+		5EF5452B21B9B2A500F73A9F /* QueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryBuilder.swift; sourceTree = "<group>"; };
+		5EF5452D21B9B48300F73A9F /* CountriesSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesSearcher.swift; sourceTree = "<group>"; };
+		5EF5453021B9B4D000F73A9F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		5EF5453221B9B7B100F73A9F /* URLConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConverter.swift; sourceTree = "<group>"; };
+		5EF5453421B9B90100F73A9F /* CountriesSearchResultParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesSearchResultParser.swift; sourceTree = "<group>"; };
 		739BB1559E93346130E55144 /* Pods_ClimaAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClimaAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4DA1973013AEB3F5190AA5 /* Pods-ClimaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimaApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClimaApp/Pods-ClimaApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BB12E90E4F19D878B7F47D49 /* Pods-ClimaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimaAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClimaAppTests/Pods-ClimaAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +107,8 @@
 		5EF544F921B979F300F73A9F /* ClimaApp */ = {
 			isa = PBXGroup;
 			children = (
+				5EF5452F21B9B4C100F73A9F /* Model */,
+				5EF5452221B9A66400F73A9F /* API */,
 				5EF5451A21B9859700F73A9F /* UI */,
 				5EF544FA21B979F300F73A9F /* AppDelegate.swift */,
 				5EF5450121B979F500F73A9F /* Assets.xcassets */,
@@ -120,6 +136,43 @@
 				5EF5451F21B9890E00F73A9F /* CityTableViewCell.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		5EF5452221B9A66400F73A9F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5EF5452821B9B26A00F73A9F /* Executors */,
+				5EF5452721B9B25A00F73A9F /* QueryBuilders */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5EF5452721B9B25A00F73A9F /* QueryBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				5EF5452921B9B28C00F73A9F /* CountriesSearchQueryBuilder.swift */,
+				5EF5452B21B9B2A500F73A9F /* QueryBuilder.swift */,
+				5EF5453221B9B7B100F73A9F /* URLConverter.swift */,
+			);
+			path = QueryBuilders;
+			sourceTree = "<group>";
+		};
+		5EF5452821B9B26A00F73A9F /* Executors */ = {
+			isa = PBXGroup;
+			children = (
+				5EF5452321B9AEAB00F73A9F /* ApiRequestExecuter.swift */,
+				5EF5452D21B9B48300F73A9F /* CountriesSearcher.swift */,
+			);
+			path = Executors;
+			sourceTree = "<group>";
+		};
+		5EF5452F21B9B4C100F73A9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EF5453021B9B4D000F73A9F /* Country.swift */,
+				5EF5453421B9B90100F73A9F /* CountriesSearchResultParser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		690DAEDFD4643E09ECD259AB /* Pods */ = {
@@ -153,6 +206,7 @@
 				5EF544F321B979F300F73A9F /* Sources */,
 				5EF544F421B979F300F73A9F /* Frameworks */,
 				5EF544F521B979F300F73A9F /* Resources */,
+				367D86F1C066FE2ECC5561A8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,6 +295,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		367D86F1C066FE2ECC5561A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ClimaApp/Pods-ClimaApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClimaApp/Pods-ClimaApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5F84C685E9DD60C26655623E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,7 +358,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF5453521B9B90100F73A9F /* CountriesSearchResultParser.swift in Sources */,
+				5EF5452A21B9B28C00F73A9F /* CountriesSearchQueryBuilder.swift in Sources */,
 				5EF544FD21B979F300F73A9F /* ViewController.swift in Sources */,
+				5EF5452C21B9B2A500F73A9F /* QueryBuilder.swift in Sources */,
+				5EF5452E21B9B48300F73A9F /* CountriesSearcher.swift in Sources */,
+				5EF5453321B9B7B100F73A9F /* URLConverter.swift in Sources */,
+				5EF5452421B9AEAB00F73A9F /* ApiRequestExecuter.swift in Sources */,
+				5EF5453121B9B4D000F73A9F /* Country.swift in Sources */,
 				5EF544FB21B979F300F73A9F /* AppDelegate.swift in Sources */,
 				5EF5452021B9890E00F73A9F /* CityTableViewCell.swift in Sources */,
 				5EF5451E21B9888700F73A9F /* CitiesTableViewController.swift in Sources */,
@@ -453,10 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7YVEXJWC56;
 				INFOPLIST_FILE = ClimaApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.interview.ClimaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -472,10 +550,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7YVEXJWC56;
 				INFOPLIST_FILE = ClimaApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.interview.ClimaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -492,11 +567,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7YVEXJWC56;
 				INFOPLIST_FILE = ClimaAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.interview.ClimaAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -514,11 +585,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7YVEXJWC56;
 				INFOPLIST_FILE = ClimaAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.interview.ClimaAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

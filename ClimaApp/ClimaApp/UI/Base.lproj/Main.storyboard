@@ -60,6 +60,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="countriesTableView" destination="Unv-R6-uwk" id="u2U-M8-x4k"/>
                         <outlet property="searchTextField" destination="23N-pV-r3n" id="Bdr-Fw-22e"/>
                     </connections>
                 </viewController>
@@ -76,33 +77,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityCell" rowHeight="91" id="wL8-FE-92o" customClass="CityTableViewCell" customModule="ClimaApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="91"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityCell" rowHeight="121" id="wL8-FE-92o" customClass="CityTableViewCell" customModule="ClimaApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="121"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wL8-FE-92o" id="829-Jr-epM">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="455-gC-rmt">
-                                            <rect key="frame" x="20" y="18" width="80" height="55"/>
+                                            <rect key="frame" x="20" y="33" width="80" height="55"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="TZJ-0H-5af"/>
                                                 <constraint firstAttribute="height" constant="55" id="nJX-eA-Pr1"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8V-9o-JOU">
-                                            <rect key="frame" x="120" y="35" width="235" height="21"/>
+                                            <rect key="frame" x="120" y="50" width="235" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="455-gC-rmt" firstAttribute="centerY" secondItem="829-Jr-epM" secondAttribute="centerY" id="KfF-X7-xMY"/>
+                                        <constraint firstAttribute="bottom" secondItem="455-gC-rmt" secondAttribute="bottom" constant="32.5" id="T8n-88-lcT"/>
                                         <constraint firstItem="455-gC-rmt" firstAttribute="leading" secondItem="829-Jr-epM" secondAttribute="leading" constant="20" id="Veb-Jp-a6V"/>
                                         <constraint firstItem="r8V-9o-JOU" firstAttribute="leading" secondItem="455-gC-rmt" secondAttribute="trailing" constant="20" id="bl9-JX-qm8"/>
                                         <constraint firstAttribute="trailing" secondItem="r8V-9o-JOU" secondAttribute="trailing" constant="20" id="m5F-gs-IRy"/>
                                         <constraint firstItem="r8V-9o-JOU" firstAttribute="centerY" secondItem="829-Jr-epM" secondAttribute="centerY" id="nNw-F7-UcJ"/>
+                                        <constraint firstItem="455-gC-rmt" firstAttribute="top" secondItem="829-Jr-epM" secondAttribute="top" constant="33" id="xbK-bh-auh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

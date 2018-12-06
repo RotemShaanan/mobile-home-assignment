@@ -1,10 +1,19 @@
 
 import UIKit
+import SDWebImage
 
 class CitiesTableViewController: UITableViewController {
     
+    var countries: [Country]?
+    
+    func countriesResultRecieved(countriesResult: [Country]) -> Void {
+        self.countries = countriesResult
+        
+        self.tableView.reloadData()
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return countries?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -12,9 +21,21 @@ class CitiesTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of CityTableViewCell.")
         }
         
-        cell.cityLabel.text = "Rotem"
+        guard let country = countries?[indexPath[1]] else {
+            return cell
+        }
+        
 
+        cell.cityLabel.text = country.getCapitalCityDescription()
+        
+        if let imageUrlString = country.flagImageUrl {
+            if let imageUrl = URLConverter.getStringAsUrl(imageUrlString) {
+                cell.flagImageView?.sd_setImage(with: imageUrl, completed: { (image: UIImage?, error: Error?, cache: SDImageCacheType, url: URL?) in
+                    self.tableView.reloadRows(at: [indexPath], with: .none)
+                })
+            }
+        }
+        
         return cell
     }
-    
 }
