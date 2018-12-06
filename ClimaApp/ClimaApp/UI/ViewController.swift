@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func searchButtonClicked(_ sender: Any) {
+        getCountries()
     }
     
     func getCountries() {
