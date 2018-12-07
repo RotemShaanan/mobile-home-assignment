@@ -2,12 +2,7 @@
 class ForecastProvider {
     
     static func getForcast(latitude: Double, longitude: Double, tempUnit: TemperatureUnits = .C, completion: @escaping (_ forecast: Forecast) -> Void) {
-        
-//        guard let searchTerm = (searchTerm != nil && !(searchTerm?.isEmpty)!) ? searchTerm : nil else {
-//            return
-//        }
-        
-        guard let url = ForecastRequestQueryBuilder.getForcastURL() else {
+            guard let url = ForecastRequestQueryBuilder.getForcastURL() else {
             return
         }
         

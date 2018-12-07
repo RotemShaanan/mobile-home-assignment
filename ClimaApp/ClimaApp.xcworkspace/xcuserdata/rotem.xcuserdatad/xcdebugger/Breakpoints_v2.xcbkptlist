@@ -182,11 +182,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/API/ApiRequests/ApiRequestExecuter.swift"
-            timestampString = "565872982.938426"
+            timestampString = "565894845.517464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/API/ApiRequests/ApiRequestExecuter.swift"
-            timestampString = "565872982.938857"
+            timestampString = "565894845.5175771"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/Data/Models/Weather/RangeIndex.swift"
-            timestampString = "565894385.128175"
+            timestampString = "565894845.517635"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "8"
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/Data/Models/Weather/ExactIndex.swift"
-            timestampString = "565894385.1283309"
+            timestampString = "565894845.517755"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "8"
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/API/ApiRequests/ForecastProvider.swift"
-            timestampString = "565883548.67582"
+            timestampString = "565894845.51782"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "getForcast(latitude:longitude:tempUnit:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -282,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/Data/Models/Weather/Precipitation.swift"
-            timestampString = "565894385.12844"
+            timestampString = "565894845.517881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "9"
@@ -298,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/Data/Models/Weather/ObservationTime.swift"
-            timestampString = "565894385.128498"
+            timestampString = "565894845.517949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "6"
@@ -330,7 +330,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/Data/Models/Weather/RangeIndex.swift"
-            timestampString = "565894385.1285909"
+            timestampString = "565894845.518061"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "9"
@@ -346,7 +346,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/Data/Models/Weather/RangeIndex.swift"
-            timestampString = "565894385.1286581"
+            timestampString = "565894845.5181299"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -362,7 +362,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/Data/Models/Weather/ExactIndex.swift"
-            timestampString = "565894385.128721"
+            timestampString = "565894845.51823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "10"
@@ -426,7 +426,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/Data/Models/Weather/RangeIndex.swift"
-            timestampString = "565894385.128889"
+            timestampString = "565894845.518477"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -442,7 +442,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/UI/Forecast/ForecastTableViewCell.swift"
-            timestampString = "565894385.128939"
+            timestampString = "565894845.5185651"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
@@ -458,7 +458,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/Data/Models/Weather/RangeIndex.swift"
-            timestampString = "565894385.128993"
+            timestampString = "565894845.518641"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -470,11 +470,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/UI/Forecast/ForecastTableViewController.swift"
-            timestampString = "565894385.129047"
+            timestampString = "565894845.518715"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -486,16 +486,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ClimaApp/UI/Forecast/ForecastTableViewController.swift"
-            timestampString = "565894385.12912"
+            timestampString = "565894845.5187939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
             endingLineNumber = "17"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ClimaApp/API/ApiRequests/ApiRequestExecuter.swift"
+            timestampString = "565894845.518849"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "apiRequest(url:params:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
