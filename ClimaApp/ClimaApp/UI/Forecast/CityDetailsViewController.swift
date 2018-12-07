@@ -7,7 +7,8 @@ let MapInitialRadius: Double = 1000000
 class CityDetailsViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
-    
+    var forecastTableViewController: ForecastTableViewController?
+
     var latitude: Double?
     var longitude: Double?
     
@@ -22,20 +23,18 @@ class CityDetailsViewController: UIViewController {
         centerMap(location: initialLocation)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let controller = segue.destination as? ForecastTableViewController {
+            self.forecastTableViewController = controller
+        }
+    }
+    
     func centerMap(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: MapInitialRadius, longitudinalMeters: MapInitialRadius)
         self.mapView.setRegion(coordinateRegion, animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func setLatLong(latitude: Double, longitude: Double) {
         self.latitude = latitude
@@ -45,11 +44,9 @@ class CityDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
-        
         if let latitude = self.latitude, let longitude = self.longitude {
-            ForecastProvider.getForcast(latitude: latitude, longitude: longitude) { (country) in
-                
+            ForecastProvider.getForcast(latitude: latitude, longitude: longitude) { (forecast) in
+                self.forecastTableViewController?.forecastResultRecieved(dailyForecastResult: forecast.daily)
             }
         }
     }
