@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CitiesSearchViewController: UIViewController {
 
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var countriesTableView: UIView!
@@ -32,12 +32,12 @@ class ViewController: UIViewController {
     
     func getCountries() {
         if let searchTerm = searchTextField.text, searchTerm != "" {
-            CountriesSearcher.getCountryByCapitalName(searchTerm: searchTerm, completion: { (countries) in
+            CountriesProvider.getCountryByCapitalName(searchTerm: searchTerm, completion: { (countries) in
                 self.countriesTableViewController?.countriesResultRecieved(countriesResult: countries)
             })
         }
         else {
-            CountriesSearcher.getAllCountries(completion: { (countries) in
+            CountriesProvider.getAllCountries(completion: { (countries) in
                 self.countriesTableViewController?.countriesResultRecieved(countriesResult: countries)
             })
         }

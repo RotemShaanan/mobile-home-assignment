@@ -1,7 +1,6 @@
 
-protocol QueryBuilder {
+class QueryBuilder {
     
-    static func getBaseUrl() -> String
-    static func getParams(searchTerm: String) -> Dictionary<String, String>
+    static let prefixProtocol = "https://"
 
 }

@@ -1,7 +1,7 @@
 
 import Foundation
 
-class CountriesSearcher {
+class CountriesProvider {
     
     static func getCountryByCapitalName(searchTerm: String?, completion: @escaping (_ countriesResult: [Country]) -> Void) {
         

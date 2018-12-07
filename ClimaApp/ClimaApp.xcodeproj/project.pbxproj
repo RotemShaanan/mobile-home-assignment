@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		263639D9BEB4893BEBEF6A8E /* Pods_ClimaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3110F3BB718464C83FB1B2F /* Pods_ClimaApp.framework */; };
 		5EF544FB21B979F300F73A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF544FA21B979F300F73A9F /* AppDelegate.swift */; };
-		5EF544FD21B979F300F73A9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF544FC21B979F300F73A9F /* ViewController.swift */; };
+		5EF544FD21B979F300F73A9F /* CitiesSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF544FC21B979F300F73A9F /* CitiesSearchViewController.swift */; };
 		5EF5450021B979F300F73A9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF544FE21B979F300F73A9F /* Main.storyboard */; };
 		5EF5450221B979F500F73A9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF5450121B979F500F73A9F /* Assets.xcassets */; };
 		5EF5450521B979F500F73A9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF5450321B979F500F73A9F /* LaunchScreen.storyboard */; };
@@ -19,10 +19,23 @@
 		5EF5452421B9AEAB00F73A9F /* ApiRequestExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5452321B9AEAB00F73A9F /* ApiRequestExecuter.swift */; };
 		5EF5452A21B9B28C00F73A9F /* CountriesSearchQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5452921B9B28C00F73A9F /* CountriesSearchQueryBuilder.swift */; };
 		5EF5452C21B9B2A500F73A9F /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5452B21B9B2A500F73A9F /* QueryBuilder.swift */; };
-		5EF5452E21B9B48300F73A9F /* CountriesSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5452D21B9B48300F73A9F /* CountriesSearcher.swift */; };
+		5EF5452E21B9B48300F73A9F /* CountriesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5452D21B9B48300F73A9F /* CountriesProvider.swift */; };
 		5EF5453121B9B4D000F73A9F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5453021B9B4D000F73A9F /* Country.swift */; };
 		5EF5453321B9B7B100F73A9F /* URLConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5453221B9B7B100F73A9F /* URLConverter.swift */; };
 		5EF5453521B9B90100F73A9F /* CountriesSearchResultParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5453421B9B90100F73A9F /* CountriesSearchResultParser.swift */; };
+		5EF5453721BA5F9100F73A9F /* ForecastProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5453621BA5F9100F73A9F /* ForecastProvider.swift */; };
+		5EF5453921BA5FC100F73A9F /* ForecastRequestQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5453821BA5FC100F73A9F /* ForecastRequestQueryBuilder.swift */; };
+		5EF5453B21BA6A9A00F73A9F /* TemperatureUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5453A21BA6A9A00F73A9F /* TemperatureUnits.swift */; };
+		5EF5453F21BA6C1800F73A9F /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5453E21BA6C1800F73A9F /* Temperature.swift */; };
+		5EF5454121BA6CA600F73A9F /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5454021BA6CA600F73A9F /* Forecast.swift */; };
+		5EF5454321BA6CF100F73A9F /* PrecipitationUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5454221BA6CF100F73A9F /* PrecipitationUnits.swift */; };
+		5EF5454521BA6D3600F73A9F /* Precipitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5454421BA6D3600F73A9F /* Precipitation.swift */; };
+		5EF5455121BA7B6600F73A9F /* CityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5455021BA7B6600F73A9F /* CityDetailsViewController.swift */; };
+		5EF5455921BA9A0A00F73A9F /* ObservationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5455821BA9A0A00F73A9F /* ObservationTime.swift */; };
+		5EF5455B21BA9C0800F73A9F /* ExactIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5455A21BA9C0800F73A9F /* ExactIndex.swift */; };
+		5EF5455D21BA9C0F00F73A9F /* RangeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5455C21BA9C0F00F73A9F /* RangeIndex.swift */; };
+		5EF5455F21BAAFB100F73A9F /* TemperatureRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5455E21BAAFB100F73A9F /* TemperatureRange.swift */; };
+		5EF5456121BAAFD000F73A9F /* PrecipitationRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5456021BAAFD000F73A9F /* PrecipitationRange.swift */; };
 		DEF6876DCC884CCD8DF11615 /* Pods_ClimaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739BB1559E93346130E55144 /* Pods_ClimaAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +54,7 @@
 		55D3FEA246CD686C15C28611 /* Pods-ClimaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimaAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClimaAppTests/Pods-ClimaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5EF544F721B979F300F73A9F /* ClimaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClimaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF544FA21B979F300F73A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5EF544FC21B979F300F73A9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EF544FC21B979F300F73A9F /* CitiesSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesSearchViewController.swift; sourceTree = "<group>"; };
 		5EF544FF21B979F300F73A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EF5450121B979F500F73A9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EF5450421B979F500F73A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,10 +67,23 @@
 		5EF5452321B9AEAB00F73A9F /* ApiRequestExecuter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestExecuter.swift; sourceTree = "<group>"; };
 		5EF5452921B9B28C00F73A9F /* CountriesSearchQueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesSearchQueryBuilder.swift; sourceTree = "<group>"; };
 		5EF5452B21B9B2A500F73A9F /* QueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryBuilder.swift; sourceTree = "<group>"; };
-		5EF5452D21B9B48300F73A9F /* CountriesSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesSearcher.swift; sourceTree = "<group>"; };
+		5EF5452D21B9B48300F73A9F /* CountriesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesProvider.swift; sourceTree = "<group>"; };
 		5EF5453021B9B4D000F73A9F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		5EF5453221B9B7B100F73A9F /* URLConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConverter.swift; sourceTree = "<group>"; };
 		5EF5453421B9B90100F73A9F /* CountriesSearchResultParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesSearchResultParser.swift; sourceTree = "<group>"; };
+		5EF5453621BA5F9100F73A9F /* ForecastProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastProvider.swift; sourceTree = "<group>"; };
+		5EF5453821BA5FC100F73A9F /* ForecastRequestQueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRequestQueryBuilder.swift; sourceTree = "<group>"; };
+		5EF5453A21BA6A9A00F73A9F /* TemperatureUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnits.swift; sourceTree = "<group>"; };
+		5EF5453E21BA6C1800F73A9F /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		5EF5454021BA6CA600F73A9F /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		5EF5454221BA6CF100F73A9F /* PrecipitationUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecipitationUnits.swift; sourceTree = "<group>"; };
+		5EF5454421BA6D3600F73A9F /* Precipitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Precipitation.swift; sourceTree = "<group>"; };
+		5EF5455021BA7B6600F73A9F /* CityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewController.swift; sourceTree = "<group>"; };
+		5EF5455821BA9A0A00F73A9F /* ObservationTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationTime.swift; sourceTree = "<group>"; };
+		5EF5455A21BA9C0800F73A9F /* ExactIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactIndex.swift; sourceTree = "<group>"; };
+		5EF5455C21BA9C0F00F73A9F /* RangeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeIndex.swift; sourceTree = "<group>"; };
+		5EF5455E21BAAFB100F73A9F /* TemperatureRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureRange.swift; sourceTree = "<group>"; };
+		5EF5456021BAAFD000F73A9F /* PrecipitationRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecipitationRange.swift; sourceTree = "<group>"; };
 		739BB1559E93346130E55144 /* Pods_ClimaAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClimaAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4DA1973013AEB3F5190AA5 /* Pods-ClimaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimaApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClimaApp/Pods-ClimaApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BB12E90E4F19D878B7F47D49 /* Pods-ClimaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimaAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClimaAppTests/Pods-ClimaAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,7 +133,7 @@
 		5EF544F921B979F300F73A9F /* ClimaApp */ = {
 			isa = PBXGroup;
 			children = (
-				5EF5452F21B9B4C100F73A9F /* Model */,
+				5EF5452F21B9B4C100F73A9F /* Data */,
 				5EF5452221B9A66400F73A9F /* API */,
 				5EF5451A21B9859700F73A9F /* UI */,
 				5EF544FA21B979F300F73A9F /* AppDelegate.swift */,
@@ -129,11 +155,12 @@
 		5EF5451A21B9859700F73A9F /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				5EF544FC21B979F300F73A9F /* ViewController.swift */,
+				5EF544FC21B979F300F73A9F /* CitiesSearchViewController.swift */,
 				5EF544FE21B979F300F73A9F /* Main.storyboard */,
 				5EF5450321B979F500F73A9F /* LaunchScreen.storyboard */,
 				5EF5451D21B9888700F73A9F /* CitiesTableViewController.swift */,
 				5EF5451F21B9890E00F73A9F /* CityTableViewCell.swift */,
+				5EF5455021BA7B6600F73A9F /* CityDetailsViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -141,7 +168,7 @@
 		5EF5452221B9A66400F73A9F /* API */ = {
 			isa = PBXGroup;
 			children = (
-				5EF5452821B9B26A00F73A9F /* Executors */,
+				5EF5452821B9B26A00F73A9F /* ApiRequests */,
 				5EF5452721B9B25A00F73A9F /* QueryBuilders */,
 			);
 			path = API;
@@ -151,28 +178,64 @@
 			isa = PBXGroup;
 			children = (
 				5EF5452921B9B28C00F73A9F /* CountriesSearchQueryBuilder.swift */,
+				5EF5453821BA5FC100F73A9F /* ForecastRequestQueryBuilder.swift */,
 				5EF5452B21B9B2A500F73A9F /* QueryBuilder.swift */,
 				5EF5453221B9B7B100F73A9F /* URLConverter.swift */,
 			);
 			path = QueryBuilders;
 			sourceTree = "<group>";
 		};
-		5EF5452821B9B26A00F73A9F /* Executors */ = {
+		5EF5452821B9B26A00F73A9F /* ApiRequests */ = {
 			isa = PBXGroup;
 			children = (
 				5EF5452321B9AEAB00F73A9F /* ApiRequestExecuter.swift */,
-				5EF5452D21B9B48300F73A9F /* CountriesSearcher.swift */,
+				5EF5452D21B9B48300F73A9F /* CountriesProvider.swift */,
+				5EF5453621BA5F9100F73A9F /* ForecastProvider.swift */,
 			);
-			path = Executors;
+			path = ApiRequests;
 			sourceTree = "<group>";
 		};
-		5EF5452F21B9B4C100F73A9F /* Model */ = {
+		5EF5452F21B9B4C100F73A9F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				5EF5453021B9B4D000F73A9F /* Country.swift */,
+				5EF5453D21BA6BAF00F73A9F /* Models */,
+				5EF5453C21BA6B6C00F73A9F /* Parsers */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5EF5453C21BA6B6C00F73A9F /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
 				5EF5453421B9B90100F73A9F /* CountriesSearchResultParser.swift */,
 			);
-			path = Model;
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		5EF5453D21BA6BAF00F73A9F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5EF5454821BA723900F73A9F /* Weather */,
+				5EF5453021B9B4D000F73A9F /* Country.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5EF5454821BA723900F73A9F /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				5EF5454021BA6CA600F73A9F /* Forecast.swift */,
+				5EF5455821BA9A0A00F73A9F /* ObservationTime.swift */,
+				5EF5454421BA6D3600F73A9F /* Precipitation.swift */,
+				5EF5456021BAAFD000F73A9F /* PrecipitationRange.swift */,
+				5EF5454221BA6CF100F73A9F /* PrecipitationUnits.swift */,
+				5EF5453E21BA6C1800F73A9F /* Temperature.swift */,
+				5EF5455E21BAAFB100F73A9F /* TemperatureRange.swift */,
+				5EF5453A21BA6A9A00F73A9F /* TemperatureUnits.swift */,
+				5EF5455A21BA9C0800F73A9F /* ExactIndex.swift */,
+				5EF5455C21BA9C0F00F73A9F /* RangeIndex.swift */,
+			);
+			path = Weather;
 			sourceTree = "<group>";
 		};
 		690DAEDFD4643E09ECD259AB /* Pods */ = {
@@ -303,12 +366,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ClimaApp/Pods-ClimaApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -358,16 +419,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF5454121BA6CA600F73A9F /* Forecast.swift in Sources */,
 				5EF5453521B9B90100F73A9F /* CountriesSearchResultParser.swift in Sources */,
 				5EF5452A21B9B28C00F73A9F /* CountriesSearchQueryBuilder.swift in Sources */,
-				5EF544FD21B979F300F73A9F /* ViewController.swift in Sources */,
+				5EF5455121BA7B6600F73A9F /* CityDetailsViewController.swift in Sources */,
+				5EF5455D21BA9C0F00F73A9F /* RangeIndex.swift in Sources */,
+				5EF544FD21B979F300F73A9F /* CitiesSearchViewController.swift in Sources */,
 				5EF5452C21B9B2A500F73A9F /* QueryBuilder.swift in Sources */,
-				5EF5452E21B9B48300F73A9F /* CountriesSearcher.swift in Sources */,
+				5EF5453B21BA6A9A00F73A9F /* TemperatureUnits.swift in Sources */,
+				5EF5452E21B9B48300F73A9F /* CountriesProvider.swift in Sources */,
 				5EF5453321B9B7B100F73A9F /* URLConverter.swift in Sources */,
+				5EF5454321BA6CF100F73A9F /* PrecipitationUnits.swift in Sources */,
 				5EF5452421B9AEAB00F73A9F /* ApiRequestExecuter.swift in Sources */,
+				5EF5453F21BA6C1800F73A9F /* Temperature.swift in Sources */,
+				5EF5454521BA6D3600F73A9F /* Precipitation.swift in Sources */,
+				5EF5456121BAAFD000F73A9F /* PrecipitationRange.swift in Sources */,
 				5EF5453121B9B4D000F73A9F /* Country.swift in Sources */,
+				5EF5453721BA5F9100F73A9F /* ForecastProvider.swift in Sources */,
 				5EF544FB21B979F300F73A9F /* AppDelegate.swift in Sources */,
 				5EF5452021B9890E00F73A9F /* CityTableViewCell.swift in Sources */,
+				5EF5455921BA9A0A00F73A9F /* ObservationTime.swift in Sources */,
+				5EF5455B21BA9C0800F73A9F /* ExactIndex.swift in Sources */,
+				5EF5455F21BAAFB100F73A9F /* TemperatureRange.swift in Sources */,
+				5EF5453921BA5FC100F73A9F /* ForecastRequestQueryBuilder.swift in Sources */,
 				5EF5451E21B9888700F73A9F /* CitiesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,7 +608,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7YVEXJWC56;
 				INFOPLIST_FILE = ClimaApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.interview.ClimaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -550,7 +627,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7YVEXJWC56;
 				INFOPLIST_FILE = ClimaApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.interview.ClimaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -567,7 +647,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7YVEXJWC56;
 				INFOPLIST_FILE = ClimaAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.interview.ClimaAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -585,7 +669,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7YVEXJWC56;
 				INFOPLIST_FILE = ClimaAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.interview.ClimaAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

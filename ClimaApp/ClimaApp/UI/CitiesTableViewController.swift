@@ -21,7 +21,7 @@ class CitiesTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of CityTableViewCell.")
         }
         
-        guard let country = countries?[indexPath[1]] else {
+        guard let country = countries?[indexPath.row] else {
             return cell
         }
         
@@ -37,5 +37,22 @@ class CitiesTableViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let cityDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "CityDetails") as! CityDetailsViewController
+        
+        guard let country = countries?[indexPath.row] else {
+            return
+        }
+        
+        guard let latitude = country.latitude, let longitude = country.longitude else {
+            return
+        }
+        
+        cityDetailsVC.setLatLong(latitude: latitude, longitude: longitude)
+        
+        self.navigationController?.pushViewController(cityDetailsVC , animated: true)
     }
 }
