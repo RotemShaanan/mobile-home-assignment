@@ -41,8 +41,8 @@ class RangeIndex {
             }
         }
                 
-        let minString = String(format: "%.2f", minTemp)
-        let maxString = String(format: "%.2f", maxTemp)
+        let minString = String(format: "%.0f", minTemp)
+        let maxString = String(format: "%.0f", maxTemp)
         return "\(minString) - \(maxString) \(unit)"
     }
     
@@ -67,7 +67,7 @@ class RangeIndex {
             }
         }
         
-        let valueString = String(format: "%.2f", value)
+        let valueString = String(format: "%.0f", value)
         return "\(valueString) \(unit)"
     }
 

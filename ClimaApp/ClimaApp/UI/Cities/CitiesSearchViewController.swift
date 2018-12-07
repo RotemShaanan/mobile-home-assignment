@@ -8,6 +8,8 @@ class CitiesSearchViewController: UIViewController {
     
     var countriesTableViewController: CitiesTableViewController?
 
+    // MARK: - life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -30,7 +32,9 @@ class CitiesSearchViewController: UIViewController {
         getCountries()
     }
     
-    func getCountries() {
+    // MARK: - private methods
+    
+    private func getCountries() {
         if let searchTerm = searchTextField.text, searchTerm != "" {
             CountriesProvider.getCountryByCapitalName(searchTerm: searchTerm, completion: { (countries) in
                 self.countriesTableViewController?.countriesResultRecieved(countriesResult: countries)

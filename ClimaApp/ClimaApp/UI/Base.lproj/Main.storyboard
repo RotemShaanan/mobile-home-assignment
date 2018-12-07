@@ -202,20 +202,20 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DayOfWeek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sF-Ww-wok">
-                                            <rect key="frame" x="16" y="25" width="114" height="21.5"/>
+                                            <rect key="frame" x="16" y="25" width="147.5" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Degrees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhI-YB-w8h">
-                                            <rect key="frame" x="159" y="10" width="196" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="173.5" y="10" width="181.5" height="24.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Precipitation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rc-qj-8lF">
-                                            <rect key="frame" x="159" y="40.5" width="96" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="173.5" y="44.5" width="81.5" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -224,7 +224,7 @@
                                         <constraint firstItem="1sF-Ww-wok" firstAttribute="centerY" secondItem="lDa-bG-hxg" secondAttribute="centerY" id="IAq-iz-rjk"/>
                                         <constraint firstItem="1sF-Ww-wok" firstAttribute="leading" secondItem="lDa-bG-hxg" secondAttribute="leading" constant="16" id="JiS-m1-j4Q"/>
                                         <constraint firstItem="WhI-YB-w8h" firstAttribute="top" secondItem="lDa-bG-hxg" secondAttribute="top" constant="10" id="Kui-xs-2yb"/>
-                                        <constraint firstItem="WhI-YB-w8h" firstAttribute="leading" secondItem="1sF-Ww-wok" secondAttribute="trailing" constant="29" id="PIf-GH-Q9i"/>
+                                        <constraint firstItem="WhI-YB-w8h" firstAttribute="leading" secondItem="1sF-Ww-wok" secondAttribute="trailing" constant="10" id="PIf-GH-Q9i"/>
                                         <constraint firstAttribute="trailing" secondItem="WhI-YB-w8h" secondAttribute="trailing" constant="20" id="SBF-WD-lgz"/>
                                         <constraint firstAttribute="bottom" secondItem="7Rc-qj-8lF" secondAttribute="bottom" constant="10" id="dxq-Yk-X3c"/>
                                         <constraint firstItem="7Rc-qj-8lF" firstAttribute="top" secondItem="WhI-YB-w8h" secondAttribute="bottom" constant="10" id="jbT-dV-kfS"/>

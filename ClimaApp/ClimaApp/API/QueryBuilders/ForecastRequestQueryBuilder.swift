@@ -10,6 +10,7 @@ class ForecastRequestQueryBuilder {
     
     private static let latitudeParamName: String = "lat"
     private static let longitudeParamName: String = "lon"
+    private static let generalUnitParamName: String = "units"
     private static let tempUnitParamName: String = "temp"
     private static let fieldsParamName: String = "fields"
     private static let fieldsRequested: String = "temp,precipitation"
@@ -23,7 +24,7 @@ class ForecastRequestQueryBuilder {
         return [tokenParamName: tokenParamValue,
                 latitudeParamName: String(format: "%.2f", latitude),
                 longitudeParamName: String(format: "%.2f", longitude),
-                tempUnitParamName: tempUnit.rawValue,
+                generalUnitParamName: "\(tempUnitParamName):\(tempUnit.rawValue)",
                 fieldsParamName: fieldsRequested]
     }
 }
