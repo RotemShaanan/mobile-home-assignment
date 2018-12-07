@@ -1,17 +1,31 @@
 
 import UIKit
+import MapKit
+
+let MapInitialRadius: Double = 1000000
 
 class CityDetailsViewController: UIViewController {
 
+    @IBOutlet weak var mapView: MKMapView!
+    
     var latitude: Double?
     var longitude: Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        guard let latitude = self.latitude, let longitude = self.longitude else {
+            return
+        }
+        
+        let initialLocation = CLLocation(latitude: latitude, longitude: longitude)
+        centerMap(location: initialLocation)
     }
     
+    func centerMap(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: MapInitialRadius, longitudinalMeters: MapInitialRadius)
+        self.mapView.setRegion(coordinateRegion, animated: true)
+    }
 
     /*
     // MARK: - Navigation
@@ -30,6 +44,8 @@ class CityDetailsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        
         
         if let latitude = self.latitude, let longitude = self.longitude {
             ForecastProvider.getForcast(latitude: latitude, longitude: longitude) { (country) in
