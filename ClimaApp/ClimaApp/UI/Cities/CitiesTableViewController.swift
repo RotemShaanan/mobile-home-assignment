@@ -53,7 +53,7 @@ class CitiesTableViewController: UITableViewController {
             return
         }
         
-        cityDetailsVC.setLatLong(latitude: latitude, longitude: longitude)
+        cityDetailsVC.setDetails(latitude: latitude, longitude: longitude, city: country.capitalCity)
         
         self.navigationController?.pushViewController(cityDetailsVC , animated: true)
     }

@@ -11,6 +11,7 @@ class CityDetailsViewController: UIViewController {
 
     var latitude: Double?
     var longitude: Double?
+    var city: String?
     var tempMetric: TemperatureUnits = .C
 
     // MARK: - Life cycle
@@ -18,6 +19,7 @@ class CityDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = city
         self.setMap()
         self.addNavButton()
     }
@@ -38,9 +40,10 @@ class CityDetailsViewController: UIViewController {
     
     // MARK: - Public methods
     
-    func setLatLong(latitude: Double, longitude: Double) {
+    func setDetails(latitude: Double, longitude: Double, city: String?) {
         self.latitude = latitude
         self.longitude = longitude
+        self.city = city
     }
     
     // MARK: - Private methods
@@ -56,6 +59,7 @@ class CityDetailsViewController: UIViewController {
     private func centerMap(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: MapInitialRadius, longitudinalMeters: MapInitialRadius)
         self.mapView.setRegion(coordinateRegion, animated: true)
+        self.mapView.addAnnotation(MapPin(title: "", coordinate: location.coordinate))
     }
     
     private func setMap() {

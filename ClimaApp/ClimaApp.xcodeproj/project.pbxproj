@@ -10,6 +10,8 @@
 		263639D9BEB4893BEBEF6A8E /* Pods_ClimaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3110F3BB718464C83FB1B2F /* Pods_ClimaApp.framework */; };
 		5E09207C21BAC1120081CA3C /* ForecastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09207B21BAC1120081CA3C /* ForecastTableViewController.swift */; };
 		5E09207E21BAC3B00081CA3C /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09207D21BAC3B00081CA3C /* ForecastTableViewCell.swift */; };
+		5E09208021BB0F320081CA3C /* CitiesMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09207F21BB0F320081CA3C /* CitiesMapViewController.swift */; };
+		5E09208321BB20A10081CA3C /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09208221BB20A10081CA3C /* MapPin.swift */; };
 		5EF544FB21B979F300F73A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF544FA21B979F300F73A9F /* AppDelegate.swift */; };
 		5EF544FD21B979F300F73A9F /* CitiesSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF544FC21B979F300F73A9F /* CitiesSearchViewController.swift */; };
 		5EF5450021B979F300F73A9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF544FE21B979F300F73A9F /* Main.storyboard */; };
@@ -56,6 +58,8 @@
 		55D3FEA246CD686C15C28611 /* Pods-ClimaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimaAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClimaAppTests/Pods-ClimaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E09207B21BAC1120081CA3C /* ForecastTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewController.swift; sourceTree = "<group>"; };
 		5E09207D21BAC3B00081CA3C /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
+		5E09207F21BB0F320081CA3C /* CitiesMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesMapViewController.swift; sourceTree = "<group>"; };
+		5E09208221BB20A10081CA3C /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		5EF544F721B979F300F73A9F /* ClimaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClimaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF544FA21B979F300F73A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EF544FC21B979F300F73A9F /* CitiesSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesSearchViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,15 @@
 			path = Forecast;
 			sourceTree = "<group>";
 		};
+		5E09208121BB0F440081CA3C /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5E09207F21BB0F320081CA3C /* CitiesMapViewController.swift */,
+				5E09208221BB20A10081CA3C /* MapPin.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		5EF544EE21B979F300F73A9F = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +194,7 @@
 			children = (
 				5E09207921BAC0470081CA3C /* Cities */,
 				5E09207A21BAC0580081CA3C /* Forecast */,
+				5E09208121BB0F440081CA3C /* Map */,
 				5EF544FE21B979F300F73A9F /* Main.storyboard */,
 				5EF5450321B979F500F73A9F /* LaunchScreen.storyboard */,
 			);
@@ -450,12 +464,14 @@
 				5E09207E21BAC3B00081CA3C /* ForecastTableViewCell.swift in Sources */,
 				5EF5452C21B9B2A500F73A9F /* QueryBuilder.swift in Sources */,
 				5EF5453B21BA6A9A00F73A9F /* TemperatureUnits.swift in Sources */,
+				5E09208021BB0F320081CA3C /* CitiesMapViewController.swift in Sources */,
 				5EF5452E21B9B48300F73A9F /* CountriesProvider.swift in Sources */,
 				5EF5453321B9B7B100F73A9F /* URLConverter.swift in Sources */,
 				5EF5454321BA6CF100F73A9F /* PrecipitationUnits.swift in Sources */,
 				5EF5452421B9AEAB00F73A9F /* ApiRequestExecuter.swift in Sources */,
 				5EF5453F21BA6C1800F73A9F /* Temperature.swift in Sources */,
 				5EF5454521BA6D3600F73A9F /* Precipitation.swift in Sources */,
+				5E09208321BB20A10081CA3C /* MapPin.swift in Sources */,
 				5EF5456121BAAFD000F73A9F /* PrecipitationRange.swift in Sources */,
 				5EF5453121B9B4D000F73A9F /* Country.swift in Sources */,
 				5EF5453721BA5F9100F73A9F /* ForecastProvider.swift in Sources */,

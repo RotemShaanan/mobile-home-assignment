@@ -59,10 +59,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1UB-ZC-u5s"/>
+                    <navigationItem key="navigationItem" id="1UB-ZC-u5s">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="7SK-NV-eKm">
+                            <rect key="frame" x="127" y="7" width="121" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="List"/>
+                                <segment title="Map"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="rTS-AQ-K8O"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
-                        <outlet property="countriesTableView" destination="Unv-R6-uwk" id="u2U-M8-x4k"/>
                         <outlet property="searchTextField" destination="23N-pV-r3n" id="Bdr-Fw-22e"/>
+                        <outlet property="segmentedControl" destination="7SK-NV-eKm" id="sVa-pd-THq"/>
+                        <outlet property="viewsContainer" destination="Unv-R6-uwk" id="u2U-M8-x4k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -88,7 +102,7 @@
         <!--Cities Table View Controller-->
         <scene sceneID="BC7-t7-zqd">
             <objects>
-                <tableViewController id="x48-4i-8y1" customClass="CitiesTableViewController" customModule="ClimaApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CitiesList" id="x48-4i-8y1" customClass="CitiesTableViewController" customModule="ClimaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mwc-F2-UB1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,7 +154,36 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVB-3y-Gqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807" y="27"/>
+            <point key="canvasLocation" x="932" y="-361"/>
+        </scene>
+        <!--Cities Map View Controller-->
+        <scene sceneID="cCA-Zm-pvN">
+            <objects>
+                <viewController storyboardIdentifier="CitiesMap" id="pIL-AP-x8w" customClass="CitiesMapViewController" customModule="ClimaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AFe-fM-0dk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1v7-yy-SR8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1v7-yy-SR8" firstAttribute="leading" secondItem="BVi-sM-74M" secondAttribute="leading" id="DUa-wk-wbq"/>
+                            <constraint firstItem="1v7-yy-SR8" firstAttribute="width" secondItem="BVi-sM-74M" secondAttribute="width" id="XDh-4i-N2N"/>
+                            <constraint firstItem="1v7-yy-SR8" firstAttribute="top" secondItem="BVi-sM-74M" secondAttribute="top" id="mQQ-ej-HTL"/>
+                            <constraint firstItem="1v7-yy-SR8" firstAttribute="height" secondItem="BVi-sM-74M" secondAttribute="height" id="zpI-fI-dKa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BVi-sM-74M"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="1v7-yy-SR8" id="4tp-Oh-IAS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEk-JH-MkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="256"/>
         </scene>
         <!--City Details View Controller-->
         <scene sceneID="R3c-9w-3Fu">
@@ -183,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qvG-GV-doi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="743"/>
+            <point key="canvasLocation" x="54" y="876"/>
         </scene>
         <!--Forecast Table View Controller-->
         <scene sceneID="GBV-IT-1ar">
@@ -202,19 +245,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DayOfWeek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sF-Ww-wok">
-                                            <rect key="frame" x="16" y="25" width="147.5" height="21.5"/>
+                                            <rect key="frame" x="16" y="25" width="96" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Degrees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhI-YB-w8h">
-                                            <rect key="frame" x="173.5" y="10" width="181.5" height="24.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Degrees" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhI-YB-w8h">
+                                            <rect key="frame" x="300.5" y="10" width="54.5" height="24.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Precipitation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rc-qj-8lF">
-                                            <rect key="frame" x="173.5" y="44.5" width="81.5" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Precipitation" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rc-qj-8lF">
+                                            <rect key="frame" x="273.5" y="44.5" width="81.5" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -224,12 +267,10 @@
                                         <constraint firstItem="1sF-Ww-wok" firstAttribute="centerY" secondItem="lDa-bG-hxg" secondAttribute="centerY" id="IAq-iz-rjk"/>
                                         <constraint firstItem="1sF-Ww-wok" firstAttribute="leading" secondItem="lDa-bG-hxg" secondAttribute="leading" constant="16" id="JiS-m1-j4Q"/>
                                         <constraint firstItem="WhI-YB-w8h" firstAttribute="top" secondItem="lDa-bG-hxg" secondAttribute="top" constant="10" id="Kui-xs-2yb"/>
-                                        <constraint firstItem="WhI-YB-w8h" firstAttribute="leading" secondItem="1sF-Ww-wok" secondAttribute="trailing" constant="10" id="PIf-GH-Q9i"/>
                                         <constraint firstAttribute="trailing" secondItem="WhI-YB-w8h" secondAttribute="trailing" constant="20" id="SBF-WD-lgz"/>
                                         <constraint firstAttribute="bottom" secondItem="7Rc-qj-8lF" secondAttribute="bottom" constant="10" id="dxq-Yk-X3c"/>
                                         <constraint firstItem="7Rc-qj-8lF" firstAttribute="top" secondItem="WhI-YB-w8h" secondAttribute="bottom" constant="10" id="jbT-dV-kfS"/>
-                                        <constraint firstItem="7Rc-qj-8lF" firstAttribute="leading" secondItem="WhI-YB-w8h" secondAttribute="leading" id="qSr-7R-g87"/>
-                                        <constraint firstAttribute="trailing" secondItem="7Rc-qj-8lF" secondAttribute="trailing" constant="120" id="vb3-Rg-boq"/>
+                                        <constraint firstItem="7Rc-qj-8lF" firstAttribute="trailing" secondItem="WhI-YB-w8h" secondAttribute="trailing" id="qSr-7R-g87"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.97617084767720474" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -248,7 +289,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D81-VS-6bx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864.79999999999995" y="742.12893553223398"/>
+            <point key="canvasLocation" x="873" y="875"/>
         </scene>
     </scenes>
 </document>
