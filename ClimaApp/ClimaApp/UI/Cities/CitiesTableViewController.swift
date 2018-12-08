@@ -26,11 +26,10 @@ class CitiesTableViewController: UITableViewController {
         guard let country = countries?[indexPath.row] else {
             return cell
         }
-        
 
         cell.cityLabel.text = country.getCapitalCityDescription()
         
-        if let imageUrlString = country.flagImageUrl {
+        if let imageUrlString = country.getFlagImageUrl() {
             if let imageUrl = URLConverter.getStringAsUrl(imageUrlString) {
                 cell.flagImageView?.sd_setImage(with: imageUrl, completed: { (image: UIImage?, error: Error?, cache: SDImageCacheType, url: URL?) in
                     self.tableView.reloadRows(at: [indexPath], with: .none)
