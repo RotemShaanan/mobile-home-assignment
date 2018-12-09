@@ -16,6 +16,9 @@
 		5E09208A21BBB04C0081CA3C /* CountryImageQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09208921BBB04C0081CA3C /* CountryImageQueryBuilder.swift */; };
 		5E09209121BD867A0081CA3C /* UIImageView+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09209021BD867A0081CA3C /* UIImageView+SetImage.swift */; };
 		5E09209621BD9B690081CA3C /* CountriesPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09209521BD9B690081CA3C /* CountriesPresenterProtocol.swift */; };
+		5E09209921BD9F1A0081CA3C /* CountriesSearchQueryBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09209821BD9F1A0081CA3C /* CountriesSearchQueryBuilderTests.swift */; };
+		5E09209B21BDA0830081CA3C /* CountryImageQueryBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09209A21BDA0830081CA3C /* CountryImageQueryBuilderTests.swift */; };
+		5E09209E21BDA1760081CA3C /* CountryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09209D21BDA1760081CA3C /* CountryTests.swift */; };
 		5EF544FB21B979F300F73A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF544FA21B979F300F73A9F /* AppDelegate.swift */; };
 		5EF544FD21B979F300F73A9F /* CitiesSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF544FC21B979F300F73A9F /* CitiesSearchViewController.swift */; };
 		5EF5450021B979F300F73A9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF544FE21B979F300F73A9F /* Main.storyboard */; };
@@ -68,6 +71,9 @@
 		5E09208921BBB04C0081CA3C /* CountryImageQueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryImageQueryBuilder.swift; sourceTree = "<group>"; };
 		5E09209021BD867A0081CA3C /* UIImageView+SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SetImage.swift"; sourceTree = "<group>"; };
 		5E09209521BD9B690081CA3C /* CountriesPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPresenterProtocol.swift; sourceTree = "<group>"; };
+		5E09209821BD9F1A0081CA3C /* CountriesSearchQueryBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesSearchQueryBuilderTests.swift; sourceTree = "<group>"; };
+		5E09209A21BDA0830081CA3C /* CountryImageQueryBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryImageQueryBuilderTests.swift; sourceTree = "<group>"; };
+		5E09209D21BDA1760081CA3C /* CountryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTests.swift; sourceTree = "<group>"; };
 		5EF544F721B979F300F73A9F /* ClimaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClimaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF544FA21B979F300F73A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EF544FC21B979F300F73A9F /* CitiesSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesSearchViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +199,23 @@
 			path = "Data Providers";
 			sourceTree = "<group>";
 		};
+		5E09209721BD9EF70081CA3C /* QueryBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				5E09209821BD9F1A0081CA3C /* CountriesSearchQueryBuilderTests.swift */,
+				5E09209A21BDA0830081CA3C /* CountryImageQueryBuilderTests.swift */,
+			);
+			path = QueryBuilders;
+			sourceTree = "<group>";
+		};
+		5E09209C21BDA16A0081CA3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E09209D21BDA1760081CA3C /* CountryTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5EF544EE21B979F300F73A9F = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +253,8 @@
 		5EF5450E21B979F500F73A9F /* ClimaAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				5E09209C21BDA16A0081CA3C /* Models */,
+				5E09209721BD9EF70081CA3C /* QueryBuilders */,
 				5EF5450F21B979F500F73A9F /* ClimaAppTests.swift */,
 				5EF5451121B979F500F73A9F /* Info.plist */,
 			);
@@ -538,7 +563,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E09209E21BDA1760081CA3C /* CountryTests.swift in Sources */,
+				5E09209B21BDA0830081CA3C /* CountryImageQueryBuilderTests.swift in Sources */,
 				5EF5451021B979F500F73A9F /* ClimaAppTests.swift in Sources */,
+				5E09209921BD9F1A0081CA3C /* CountriesSearchQueryBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

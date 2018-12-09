@@ -27,7 +27,7 @@ class Country {
             return nil
         }
         
-        return CountryImageProvider.getCountryImage(countryCode: countryCode)
+        return CountryImageProvider.getCountryImageUrl(countryCode: countryCode)
     }
     
     func getCapitalCityDescription() -> String {
