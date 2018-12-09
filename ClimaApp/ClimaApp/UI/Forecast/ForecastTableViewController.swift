@@ -7,7 +7,7 @@ class ForecastTableViewController: UITableViewController {
 
     var dailyForecast: [RangeIndex]?
     
-    func forecastResultRecieved(dailyForecastResult: [RangeIndex]) -> Void {
+    func forecastResultRecieved(dailyForecastResult: [RangeIndex]) {
         self.dailyForecast = dailyForecastResult
         
         self.tableView.reloadData()

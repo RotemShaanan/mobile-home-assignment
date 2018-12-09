@@ -1,12 +1,13 @@
 
 import UIKit
-import SDWebImage
 
-class CitiesTableViewController: UITableViewController {
+class CitiesTableViewController: UITableViewController, CountriesPresenterProtocol {
     
     var countries: [Country]?
     
-    func countriesResultRecieved(countriesResult: [Country]) -> Void {
+    // MARK: - CountriesPresenterProtocol
+    
+    func countriesResultRecieved(countriesResult: [Country]) {
         self.countries = countriesResult
         
         self.tableView.reloadData()
@@ -27,16 +28,8 @@ class CitiesTableViewController: UITableViewController {
             return cell
         }
 
-        cell.cityLabel.text = country.getCapitalCityDescription()
-        
-        if let imageUrlString = country.getFlagImageUrl() {
-            if let imageUrl = URLConverter.getStringAsUrl(imageUrlString) {
-                cell.flagImageView?.sd_setImage(with: imageUrl, completed: { (image: UIImage?, error: Error?, cache: SDImageCacheType, url: URL?) in
-                    self.tableView.reloadRows(at: [indexPath], with: .none)
-                })
-            }
-        }
-        
+        cell.setData(text: country.getCapitalCityDescription(), imageUrl: country.getFlagImageUrl())
+                
         return cell
     }
     

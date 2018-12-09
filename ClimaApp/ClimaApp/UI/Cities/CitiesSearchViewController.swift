@@ -13,13 +13,16 @@ class CitiesSearchViewController: UIViewController {
     private lazy var citiesMapViewController: CitiesMapViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         var viewController = storyboard.instantiateViewController(withIdentifier: "CitiesMap") as! CitiesMapViewController
-        self.add(asChildViewController: viewController)
         
         return viewController
     }()
 
     // MARK: - life cycle
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,28 +83,25 @@ class CitiesSearchViewController: UIViewController {
         }
         
         if self.segmentedControl.selectedSegmentIndex == 0 {
-            remove(asChildViewController: citiesMapViewController)
-            add(asChildViewController: countriesTableViewController)
+            remove(childViewController: citiesMapViewController)
+            add(childViewController: countriesTableViewController)
+
         } else {
-            remove(asChildViewController: countriesTableViewController)
-            add(asChildViewController: citiesMapViewController)
+            remove(childViewController: countriesTableViewController)
+            add(childViewController: citiesMapViewController)
         }
     }
     
-    private func add(asChildViewController viewController: UIViewController) {
-        self.addChild(viewController)
-        self.viewsContainer.addSubview(viewController.view)
-        
-        viewController.view.frame = self.viewsContainer.bounds
-        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        viewController.didMove(toParent: self)
+    private func add(childViewController: UIViewController) {
+        self.addChild(childViewController)
+        self.viewsContainer.addSubview(childViewController.view)
+        childViewController.didMove(toParent: self)
     }
 
-    private func remove(asChildViewController viewController: UIViewController) {
+    private func remove(childViewController: UIViewController) {
 
-        viewController.willMove(toParent: nil)
-        viewController.view.removeFromSuperview()
-        viewController.removeFromParent()
+        childViewController.willMove(toParent: nil)
+        childViewController.view.removeFromSuperview()
+        childViewController.removeFromParent()
     }
 }

@@ -6,8 +6,8 @@ target 'ClimaApp' do
   use_frameworks!
 
   # Pods for ClimaApp
-  pod 'Alamofire'
-  pod 'SDWebImage'
+  pod 'Alamofire', '4.7.3'
+  pod 'SDWebImage', '4.4.2'
 
   target 'ClimaAppTests' do
     inherit! :search_paths

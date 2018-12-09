@@ -2,7 +2,7 @@
 import UIKit
 import MapKit
 
-class CitiesMapViewController: UIViewController, MKMapViewDelegate {
+class CitiesMapViewController: UIViewController, MKMapViewDelegate, CountriesPresenterProtocol {
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -14,18 +14,14 @@ class CitiesMapViewController: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
     }
     
-    func countriesResultRecieved(countriesResult: [Country]) -> Void {
-        self.countries = countriesResult
-        
-        self.prepareMap()
-    }
-
     private func prepareMap() {
         guard let countries = self.countries else {
             return
         }
         
-        self.mapView.removeAnnotations(self.mapView.annotations)
+        if self.mapView?.annotations != nil {
+            self.mapView.removeAnnotations(self.mapView.annotations)
+        }
         
         for country in countries {
             if let title = country.capitalCity, let latitude = country.latitude, let longitude = country.longitude {
@@ -40,5 +36,13 @@ class CitiesMapViewController: UIViewController, MKMapViewDelegate {
         let cityDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "CityDetails") as! CityDetailsViewController
         cityDetailsVC.setDetails(latitude: mapPin.coordinate.latitude, longitude: mapPin.coordinate.longitude, city: mapPin.title)
         self.navigationController?.pushViewController(cityDetailsVC , animated: true)
+    }
+    
+    // MARK: - CountriesPresenterProtocol
+    
+    func countriesResultRecieved(countriesResult: [Country]) {
+        self.countries = countriesResult
+        
+        self.prepareMap()
     }
 }

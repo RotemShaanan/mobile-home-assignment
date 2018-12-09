@@ -3,6 +3,8 @@ import Foundation
 
 class CountriesProvider {
     
+    // MARK: - public methods
+    
     static func getCountryByCapitalName(searchTerm: String?, completion: @escaping (_ countriesResult: [Country]) -> Void) {
         
         guard let searchTerm = (searchTerm != nil && !(searchTerm?.isEmpty)!) ? searchTerm : nil else {
@@ -24,6 +26,8 @@ class CountriesProvider {
         
         executeApiRequest(url: url, params: nil, completion: completion)
     }
+    
+    // MARK: - private methods
     
     private static func executeApiRequest(url: URL, params: Dictionary<String, String>?, completion: @escaping (_ countriesResult: [Country]) -> Void) {
         ApiRequestExecuter.apiRequest(url: url, params: nil, completion: {(result: Any) -> Void in
