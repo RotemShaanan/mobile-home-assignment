@@ -1,3 +1,23 @@
+
+### Rotem Shaanan's Project
+
+#### Bonuses completed:
+* Fahrenheit <-> Celsius
+* MapView for countries
+
+#### Pods used:
+* [Alamofire](https://github.com/Alamofire/Alamofire)
+* [SDWebImage](https://github.com/SDWebImage/SDWebImage)
+
+#### Unit Tests:
+Wrote some unit tests as example.
+
+#### Running instructions:
+* Open ClimaApp.xcworkspace file
+* Run 'pod install' from ClimaApp main folder
+
+
+
 # The Cat in the Hat
 
 ![can in the hat
